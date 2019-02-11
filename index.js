@@ -1,17 +1,17 @@
-function takeANumber(currentLine, newPerson) {
+var counter = 0;
+function takeANumber(currentLine) {
+  counter += 1;
   // Creates a variable to later add a person to the currentLine
   var newLine;
   // Adds a person to the currentLine
-  newLine = currentLine.push(newPerson)
+  newLine = currentLine.push(counter)
   // Returns a message with the newPerson name and her position in line 
-  return `Welcome, ${newPerson}. You are number ${currentLine.length} in line.`
+  return `You are number ${counter} in line.`
 }
 
 function nowServing(deliLine) {
-  // Creates a variable to store the name of the first person in line.
-  var newDeliLine;
   // Removes the first element of deliLine and stores it in newLiLine
-  newDeliLine = deliLine.shift()
+  var newDeliLine = deliLine.shift()
   // Checks if deliLine is an empty array
   if (deliLine.length === 0) return `There is nobody waiting to be served!`
   // Returns the first element of deliLine and updates deliLine  
